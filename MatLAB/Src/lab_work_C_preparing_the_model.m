@@ -35,7 +35,7 @@ p = u^3*coeff_pump_curve(1) + u^2*coeff_pump_curve(2) + ...
 
 q1 = a*sqrt(2*grav*(x(1)+h_outlet));
 q2 = a*sqrt(2*grav*(x(2)+h_outlet));
-qd = d*sqrt(2*grav*(x(1)+h_outlet));   % Should be h(1)???
+qd = d*sqrt(2*grav*(x(1)+h_outlet));
 
 % dx1 = dx1/dt
 %dx1 = p/Area_base - q1/Area_base  - qd/Area_base;
@@ -52,4 +52,6 @@ h = coeff_sensor_curve(1)*x(2) + coeff_sensor_curve(2)
 y = h + n;
 
 dx_matlab_function = matlabFunction(dx)     % To be used in simulink
-y_matlab_function = matlabFunction(y)       % To be used in simulink
+y_matlab_function = matlabFunction(h)       % To be used in simulink
+
+u_bar_0_8cm = 
