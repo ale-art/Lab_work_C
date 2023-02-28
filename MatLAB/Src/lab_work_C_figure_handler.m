@@ -1,0 +1,129 @@
+%%% Con questo script vengono gestiti in maniera centralizzata tutti i
+%%% salvataggi delle immagini.
+
+extraOpt = {'title style={font={\LARGE\bfseries},yshift=1cm}',...
+                        'legend style={font={\Large}}',...
+                        'x tick label style={font={\Large}}',...
+                        'y tick label style={font={\Large}}',...
+                        'z tick label style={font={\Large}}',...
+                        'xlabel style={font={\Large}}',...
+                        'ylabel style={font={\Large}}',...
+                        'zlabel style={font={\Large}}'};
+                    % To get the bold font it should be used like...
+                    %   {\Large\bfseries}
+
+secPausa = 0.01;
+
+fprintf("*** Conversione e salvataggio immagini Tikz ***\n...\n");
+
+lab_work_B_init_routine;
+
+
+% *** Esempio di salvataggio ***
+% %% Plot delle forze (generalizzate) Fqm e check
+% figure();
+% subplot(2,1,1);
+%     auto_plot(t,Fqm(1,:),Fqm(2,:),Fqm(3,:),...
+%         'Andamendo delle forze generalizzate $F_{qm}$',...
+%         '$F_{\lambda}$|$C_{\beta}$|$C_{\gamma}$','time (s)|(N) (Nm)');
+% subplot(2,1,2);
+%     auto_plot(t,WInvDyn,'','','');
+%     hold on
+%     auto_plot(t(2:end),WChInvDyn,...
+%         'Andamento della potenza $W$',...
+%         '$W$|$W_{Ch}$','time (s)|(W)');
+% saveas(gcf,'MatLab/Plots/task_dinamica.m')
+
+
+%% 
+estimation_wI_u1;
+set(gcf,'visible','off');
+matlab2tikz('filename',...
+    'Figures/Estimation_wI_u1/estimation_wI_u1.tex',...
+    'showInfo',false,'strict',true,'standalone',true,...
+    'extraaxisoptions',extraOpt);
+pause(secPausa);
+
+
+%%
+estimation_wI_u2;
+set(gcf,'visible','off');
+matlab2tikz('filename',...
+    'Figures/Estimation_wI_u2/estimation_wI_u2.tex',...
+    'showInfo',false,'strict',true,'standalone',true,...
+    'extraaxisoptions',extraOpt);
+pause(secPausa);
+
+
+%%
+estimation_wI_u3;
+set(gcf,'visible','off');
+matlab2tikz('filename',...
+    'Figures/Estimation_wI_u3/estimation_wI_u3.tex',...
+    'showInfo',false,'strict',true,'standalone',true,...
+    'extraaxisoptions',extraOpt);
+pause(secPausa);
+
+
+%% 
+simulation_result_y1;
+set(gcf,'visible','off');
+matlab2tikz('filename',...
+    'Figures/Simulation_result_y1/simulation_result_y1.tex',...
+    'showInfo',false,'strict',true,'standalone',true,...
+    'extraaxisoptions',extraOpt);
+pause(secPausa);
+
+
+%% 
+simulation_result_y2;
+set(gcf,'visible','off');
+matlab2tikz('filename',...
+    'Figures/Simulation_result_y2/simulation_result_y2.tex',...
+    'showInfo',false,'strict',true,'standalone',true,...
+    'extraaxisoptions',extraOpt);
+pause(secPausa);
+
+
+%% 
+simulation_result_y3;
+set(gcf,'visible','off');
+matlab2tikz('filename',...
+    'Figures/Simulation_result_y3/simulation_result_y3.tex',...
+    'showInfo',false,'strict',true,'standalone',true,...
+    'extraaxisoptions',extraOpt);
+pause(secPausa);
+
+
+%%
+numerical_problems_example;
+set(gcf,'visible','off');
+matlab2tikz('filename',...
+    'Figures/Numerical_problems_example/numerical_problems_example.tex',...
+    'showInfo',false,'strict',true,'standalone',true,...
+    'extraaxisoptions',extraOpt);
+pause(secPausa);
+
+
+%%
+evaluating_norm_Delta_x_T;
+set(gcf,'visible','off');
+matlab2tikz('filename',...
+    'Figures/Evaluating_norm_Delta_x_T/evaluating_norm_Delta_x_T.tex',...
+    'showInfo',false,'strict',true,'standalone',true,...
+    'extraaxisoptions',extraOpt);
+pause(secPausa);
+
+
+%%
+nominal_response;
+set(gcf,'visible','off');
+matlab2tikz('filename',...
+    'Figures/Nominal_response/nominal_response.tex',...
+    'showInfo',false,'strict',true,'standalone',true,...
+    'extraaxisoptions',extraOpt);
+pause(secPausa);
+
+
+%% 
+fprintf("*** Completato*** \n \n");
