@@ -53,5 +53,3 @@ y = h + n;
 
 dx_matlab_function = matlabFunction(dx)     % To be used in simulink
 y_matlab_function = matlabFunction(h)       % To be used in simulink
-
-u_bar_0_8cm = 
