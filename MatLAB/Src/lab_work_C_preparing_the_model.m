@@ -32,12 +32,13 @@ x = [x1;x2];
 
 p = u.^3*coeff_pump_curve(1) + u.^2*coeff_pump_curve(2) + ...
         u.*coeff_pump_curve(3) + coeff_pump_curve(4);
-p_mf = matlabFunction(p)
+p_mf = matlabFunction(p);
 
 coeff_pump_curve_inv = polyfit(pump_data(:,2),pump_data(:,1),3);
-pm1_mf = @(w) w.^3*coeff_pump_curve_inv(1) + w.^2*coeff_pump_curve_inv(2) + ...
-        w.*coeff_pump_curve_inv(3) + coeff_pump_curve_inv(4);
 
+pm1 =  u_bar.^3*coeff_pump_curve_inv(1) + u_bar.^2*coeff_pump_curve_inv(2) + ...
+        u_bar.*coeff_pump_curve_inv(3) + coeff_pump_curve_inv(4);
+pm1_mf = matlabFunction(vpa(pm1))
 
 q1 = a*sqrt(2*grav*(x(1)+h_outlet));
 q2 = a*sqrt(2*grav*(x(2)+h_outlet));
