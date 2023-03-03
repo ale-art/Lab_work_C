@@ -2,8 +2,8 @@
 
 %finding the stable curve
 %p2/p1<0 first guess rand()
-p2 = 4;
-p1 = 3;
+p2 = 0.2;
+p1 = 0.5;
 
 
 z = [dh;h];
@@ -33,5 +33,5 @@ p=[p1 p2]; %p vector transposed
 p_norm=p/norm(p);
 %f=f*[0 r]
 syms mu
-u=-p_norm*f_z/(p_norm*g_z)-mu/(p_norm*g_z)*sat(surface,0.1);
+u=-p_norm*f_z/(p_norm*g_z)-mu/(p_norm*g_z)*sat(surface,0.2);
 u=matlabFunction(u)
