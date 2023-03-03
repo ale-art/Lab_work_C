@@ -1,4 +1,4 @@
-function h = case_1_model
+function h = sim_result_comparison_sc
 % This function was created by saveas(...,'mfig'), or print -dmfile.
 % It loads an HG object saved in binary format in the FIG-file of the
 % same name.  NOTE: if you want to see the old-style MATLAB code

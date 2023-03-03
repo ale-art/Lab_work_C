@@ -38,7 +38,7 @@ coeff_pump_curve_inv = polyfit(pump_data(:,2),pump_data(:,1),3);
 
 pm1 =  u_bar.^3*coeff_pump_curve_inv(1) + u_bar.^2*coeff_pump_curve_inv(2) + ...
         u_bar.*coeff_pump_curve_inv(3) + coeff_pump_curve_inv(4);
-pm1_mf = matlabFunction(vpa(pm1))
+pm1_mf = matlabFunction(vpa(pm1));
 
 q1 = a*sqrt(2*grav*(x(1)+h_outlet));
 q2 = a*sqrt(2*grav*(x(2)+h_outlet));

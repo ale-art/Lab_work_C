@@ -16,7 +16,7 @@ secPausa = 0.01;
 
 fprintf("*** Conversione e salvataggio immagini Tikz ***\n...\n");
 
-lab_work_B_init_routine;
+lab_work_C_init_routine;
 
 
 % *** Esempio di salvataggio ***
@@ -36,93 +36,72 @@ lab_work_B_init_routine;
 
 
 %% 
-estimation_wI_u1;
-set(gcf,'visible','off');
+sim_result_case_1_fl;
+% set(gcf,'visible','off');
+set(gcf,'Position',[0 0 600 800])
 matlab2tikz('filename',...
-    'Figures/Estimation_wI_u1/estimation_wI_u1.tex',...
-    'showInfo',false,'strict',true,'standalone',true,...
-    'extraaxisoptions',extraOpt);
-pause(secPausa);
-
-
-%%
-estimation_wI_u2;
-set(gcf,'visible','off');
-matlab2tikz('filename',...
-    'Figures/Estimation_wI_u2/estimation_wI_u2.tex',...
-    'showInfo',false,'strict',true,'standalone',true,...
-    'extraaxisoptions',extraOpt);
-pause(secPausa);
-
-
-%%
-estimation_wI_u3;
-set(gcf,'visible','off');
-matlab2tikz('filename',...
-    'Figures/Estimation_wI_u3/estimation_wI_u3.tex',...
+    'Figures/Sim_result_case_1_fl/sim_result_case_1_fl.tex',...
     'showInfo',false,'strict',true,'standalone',true,...
     'extraaxisoptions',extraOpt);
 pause(secPausa);
 
 
 %% 
-simulation_result_y1;
-set(gcf,'visible','off');
+sim_result_case_2_fl;
+% set(gcf,'visible','off');
+set(gcf,'Position',[0 0 600 800])
 matlab2tikz('filename',...
-    'Figures/Simulation_result_y1/simulation_result_y1.tex',...
+    'Figures/Sim_result_case_2_fl/sim_result_case_2_fl.tex',...
+    'showInfo',false,'strict',true,'standalone',true,...
+    'extraaxisoptions',extraOpt);
+pause(secPausa);
+
+
+
+%% 
+sim_result_comparison_fl;
+% set(gcf,'visible','off');
+set(gcf,'Position',[0 0 600 800])
+matlab2tikz('filename',...
+    'Figures/Sim_result_comparison_fl/sim_result_comparison_fl.tex',...
     'showInfo',false,'strict',true,'standalone',true,...
     'extraaxisoptions',extraOpt);
 pause(secPausa);
 
 
 %% 
-simulation_result_y2;
-set(gcf,'visible','off');
+sim_result_case_1_sc;
+% set(gcf,'visible','off');
+set(gcf,'Position',[0 0 600 800])
 matlab2tikz('filename',...
-    'Figures/Simulation_result_y2/simulation_result_y2.tex',...
+    'Figures/Sim_result_case_1_sc/sim_result_case_1_sc.tex',...
     'showInfo',false,'strict',true,'standalone',true,...
     'extraaxisoptions',extraOpt);
 pause(secPausa);
 
 
 %% 
-simulation_result_y3;
-set(gcf,'visible','off');
+sim_result_case_2_sc;
+% set(gcf,'visible','off');
+set(gcf,'Position',[0 0 600 800])
 matlab2tikz('filename',...
-    'Figures/Simulation_result_y3/simulation_result_y3.tex',...
+    'Figures/Sim_result_case_2_sc/sim_result_case_2_sc.tex',...
     'showInfo',false,'strict',true,'standalone',true,...
     'extraaxisoptions',extraOpt);
 pause(secPausa);
 
 
-%%
-numerical_problems_example;
-set(gcf,'visible','off');
+
+%% 
+sim_result_comparison_sc;
+% set(gcf,'visible','off');
+set(gcf,'Position',[0 0 600 800])
 matlab2tikz('filename',...
-    'Figures/Numerical_problems_example/numerical_problems_example.tex',...
+    'Figures/Sim_result_comparison_sc/sim_result_comparison_sc.tex',...
     'showInfo',false,'strict',true,'standalone',true,...
     'extraaxisoptions',extraOpt);
 pause(secPausa);
 
-
-%%
-evaluating_norm_Delta_x_T;
-set(gcf,'visible','off');
-matlab2tikz('filename',...
-    'Figures/Evaluating_norm_Delta_x_T/evaluating_norm_Delta_x_T.tex',...
-    'showInfo',false,'strict',true,'standalone',true,...
-    'extraaxisoptions',extraOpt);
-pause(secPausa);
-
-
-%%
-nominal_response;
-set(gcf,'visible','off');
-matlab2tikz('filename',...
-    'Figures/Nominal_response/nominal_response.tex',...
-    'showInfo',false,'strict',true,'standalone',true,...
-    'extraaxisoptions',extraOpt);
-pause(secPausa);
 
 
 %% 

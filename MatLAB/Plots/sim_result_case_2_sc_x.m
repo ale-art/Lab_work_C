@@ -1,4 +1,4 @@
-function h = case_2_feedback_linearization
+function h = sim_result_case_2_sc_x
 % This function was created by saveas(...,'mfig'), or print -dmfile.
 % It loads an HG object saved in binary format in the FIG-file of the
 % same name.  NOTE: if you want to see the old-style MATLAB code
