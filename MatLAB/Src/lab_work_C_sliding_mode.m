@@ -52,6 +52,7 @@ subplot(2,1,1);
     auto_plot('SC - $x$ with state measure',...
             '$x_1$ mes|$x_2$ mes','time (s)|height $x$ (cm)');
 subplot(2,1,2);
+    set(gca,'ColorOrderIndex',3)
     plot(sim_result_case_1_sc_u);
     hold on;
     auto_plot('SC - model $u$ with state measure',...
@@ -61,7 +62,7 @@ saveas(gcf,'Plots/sim_result_case_1_sc.m');
 
 % *** Simulation case 2 ***
 sim_output_sample_time = 1;
-sim_time = 200;
+sim_time = 120;
 
 sim_r = cm2V_mf(10);
 %sim("slider_mode_controller_kalman_filter_sim",sim_time);
@@ -75,11 +76,12 @@ subplot(2,1,1);
     auto_plot('SC model - $x$ with state estimation',...
             '$x_1$ kal|$x_2$ kal','time (s)|height $x$ (cm)');
 subplot(2,1,2);
+    set(gca,'ColorOrderIndex',3)
     plot(sim_result_case_2_fl_u);
     hold on;
     auto_plot('SC model - $u$ with state estimation',...
             '$u$ kal','time (s)|voltage $u$ (V)');
-saveas(gcf,'Plots/sim_result_case_2_sc_x.m');
+saveas(gcf,'Plots/sim_result_case_2_sc.m');
 
 
 % Comparison
@@ -87,12 +89,15 @@ figure();
 subplot(2,1,1);
     plot(sim_result_case_2_sc_x);
     hold on;
+    set(gca,'ColorOrderIndex',1)
     plot(sim_result_case_1_sc_x,'--');
     auto_plot('SC model - $x$ andament',...
             '$x_1$ kal|$x_2$ kal|$x_1$ mes|$x_2$ mes','time (s)|height $x$ (cm)');
 subplot(2,1,2);
+    set(gca,'ColorOrderIndex',3)
     plot(sim_result_case_2_sc_u);
     hold on;
+    set(gca,'ColorOrderIndex',3)
     plot(sim_result_case_1_sc_u,'--');
     auto_plot('SC model - $u$ andmanent',...
             '$u$ kal|$u$ mes','time (s)|voltage $u$ (V)');

@@ -22,4 +22,7 @@ yellow_m = "#F6D78A";
 purple = "#7E2F8E";
 purple_m = "#D39ADE";
 
+DarkerDefaultColor = brighten('DefaultColor',-0.7);
+
+
 
