@@ -63,6 +63,9 @@ y_mf = matlabFunction(h);       % To be used in simulink
 
 cm2V_mf = @(z) coeff_sensor_curve(1)*z + coeff_sensor_curve(2);
 
+V2cm = h;
+V2cm_mf = matlabFunction(V2cm)
+
 
 % *** Finding u0 ***
 u0_bar_8cm = double(solve(subs(dx,[x1 x2 d n],[8 8 0 0])==0,u_bar));

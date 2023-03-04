@@ -29,7 +29,7 @@ sim_output_sample_time = 1;
 sim_time = 120;
 
 sim_r = cm2V_mf(10);
-%sim("feedback_linearization_sim",sim_time);
+sim("feedback_linearization_sim_18",sim_time);
 
 % load("Results\sim_result_case_1_fl_x");
 % load("Results\sim_result_case_1_fl_u");
@@ -53,7 +53,7 @@ sim_r = cm2V_mf(10);
 %% Case 2: you are not allowed to make use of the measurement in h1, but the measurement from h2 should be used.
 % Stuff has been copied from the lab_work_A experience
 sim_u = u0_8cm;
-%sim("feedback_linearization_kalman_filter_sim",sim_time);
+sim("feedback_linearization_kalman_filter_sim_18",sim_time);
 
 load("Results\sim_result_case_2_fl_x");
 load("Results\sim_result_case_2_fl_u");
