@@ -1,9 +1,10 @@
 %% Sliding Mode Controller
 
 %finding the stable curve
-%p2/p1<0 first guess rand()
-p2 = 0.2;
-p1 = 0.5;
+%p2/p1 < 0 first guess rand()
+syms p1 p2 
+% p2 = 0.1;
+% p1 = 0.25;
 
 z = [dh;h];
 dz = jacobian(z,x)*dx;
@@ -31,17 +32,17 @@ surface = p1*z1+p2*(z2-r);
 p=[p1 p2]; %p vector transposed
 p_norm=p/norm(p);
 %f=f*[0 r]
-syms mu;
-u=-p_norm*f_z/(p_norm*g_z)-mu/(p_norm*g_z)*sat(surface,0.2);
-u=matlabFunction(u);
+syms mu epsi;
+u=-p_norm*f_z/(p_norm*g_z)-mu/(p_norm*g_z)*sat(surface,epsi);
+u=matlabFunction(u)
 
 
 % *** Simulation case 1 ***
 sim_output_sample_time = 1;
 sim_time = 120;
 
-sim_r = cm2V_mf(678);
-%sim("slider_mode_controller_sim",sim_time);
+sim_r = cm2V_mf(12);
+sim("slider_mode_controller_sim_18",sim_time);
 load("Results\sim_result_case_1_sc_x");
 load("Results\sim_result_case_1_sc_u");
 
@@ -64,8 +65,8 @@ saveas(gcf,'Plots/sim_result_case_1_sc.m');
 sim_output_sample_time = 1;
 sim_time = 120;
 
-sim_r = cm2V_mf(10);
-%sim("slider_mode_controller_kalman_filter_sim",sim_time);
+sim_r = cm2V_mf(12);
+sim("slider_mode_controller_kalman_filter_sim_18",sim_time);
 load("Results\sim_result_case_2_sc_x");
 load("Results\sim_result_case_2_sc_u");
 
