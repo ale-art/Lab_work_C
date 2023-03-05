@@ -12,7 +12,7 @@ T = [h;dh];
 T_mf = matlabFunction(T);
 % The reasoning is this...
 % u_bar = k(xi,r)
-syms r;
+syms r ;
 
 pole1 = -0.05;
 pole2 = -0.075;
@@ -22,7 +22,7 @@ L = flip(L(2:end));
 Lr = L(1);
 
 k = solve(ddh==(-L*T+Lr*r),u_bar);
-k_mf = matlabFunction(k);
+k_mf = matlabFunction(k)
 
 % *** Simulation ***
 sim_output_sample_time = 1;
