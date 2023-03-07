@@ -12,11 +12,13 @@ T = [h;dh];
 T_mf = matlabFunction(T);
 % The reasoning is this...
 % u_bar = k(xi,r)
-syms r pole1 pole2;
+syms r ;
 
-pole1 = -0.05;
-pole2 = -0.075;
-L = conv([1 -pole1],[1 -pole2]);
+syms pole1 pole2;
+% pole1 = -0.05;
+% pole2 = -0.075;
+% L = conv([1 -pole1],[1 -pole2])
+L = [1 (-pole1+-pole2) -pole1*-pole2];
 L = flip(L(2:end));
 
 Lr = L(1);
