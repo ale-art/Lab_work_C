@@ -41,7 +41,7 @@ u=matlabFunction(u)
 sim_output_sample_time = 1;
 sim_time = 120;
 
-sim_r = cm2V_mf(12);
+sim_r = cm2V_mf(10);
 sim("slider_mode_controller_sim_18",sim_time);
 load("Results\sim_result_case_1_sc_x");
 load("Results\sim_result_case_1_sc_u");
@@ -65,7 +65,7 @@ saveas(gcf,'Plots/sim_result_case_1_sc.m');
 sim_output_sample_time = 1;
 sim_time = 120;
 
-sim_r = cm2V_mf(12);
+sim_r = cm2V_mf(10);
 sim("slider_mode_controller_kalman_filter_sim_18",sim_time);
 load("Results\sim_result_case_2_sc_x");
 load("Results\sim_result_case_2_sc_u");

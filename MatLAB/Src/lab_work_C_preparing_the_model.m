@@ -1,4 +1,4 @@
-%% Preparing the model;
+% Preparing the model;
 % Taken from the model developed in simulink by the professor
 sensor_data = [3.0 4.0 4.8 6.0 7.0 7.9 9.0 9.9 11.2 12.5 14 14.7;
      0.56 1.33 1.91 2.87 3.53 4.25 5.09 5.78 6.70 7.72 8.80 9.23]';
