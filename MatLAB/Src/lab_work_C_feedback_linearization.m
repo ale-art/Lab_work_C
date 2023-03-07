@@ -12,7 +12,7 @@ T = [h;dh];
 T_mf = matlabFunction(T);
 % The reasoning is this...
 % u_bar = k(xi,r)
-syms r ;
+syms r pole1 pole2;
 
 pole1 = -0.05;
 pole2 = -0.075;
