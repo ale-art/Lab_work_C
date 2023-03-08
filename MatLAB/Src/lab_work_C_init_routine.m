@@ -11,18 +11,20 @@ cd MatLAB\;
 
 
 % *** Adjust the linewidth of every plot ***
-set(0,'DefaultLineLineWidth',1.75);
+lw = 1.5;
+set(0,'DefaultLineLineWidth',lw);
 
-blue=[0, 0.4470, 0.7410];
-blu_m = "#7DCAFF";
-red=[0.8500, 0.3250, 0.0980];
-red_m = "#F1A583";
-yellow=[0.9290, 0.6940, 0.1250];
-yellow_m = "#F6D78A";
-purple = "#7E2F8E";
-purple_m = "#D39ADE";
+default_color_order = get(gca,'ColorOrder');
 
-DarkerDefaultColor = brighten('DefaultColor',-0.7);
+blue=default_color_order(1,:);
+red=default_color_order(2,:);
+yellow=default_color_order(3,:);
+purple=default_color_order(4,:);
+green=default_color_order(5,:);
+light_blue=default_color_order(6,:);
+porpora=default_color_order(7,:);
+
+lighter_color_order = brighten(default_color_order,-1);
 
 
 

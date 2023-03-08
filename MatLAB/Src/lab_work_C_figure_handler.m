@@ -34,74 +34,74 @@ lab_work_C_init_routine;
 %         '$W$|$W_{Ch}$','time (s)|(W)');
 % saveas(gcf,'MatLab/Plots/task_dinamica.m')
 
+plot_position = [0 0 600 700];
+
 
 %% 
-sim_result_case_1_fl;
+sim_result_fl_first_tun_fig;
 % set(gcf,'visible','off');
-set(gcf,'Position',[0 0 600 800])
+set(gcf,'Position',plot_position)
 matlab2tikz('filename',...
-    'Figures/Sim_result_case_1_fl/sim_result_case_1_fl.tex',...
+    'Figures/Sim_result_fl_first_tun_fig/sim_result_fl_first_tun_fig.tex',...
     'showInfo',false,'strict',true,'standalone',true,...
     'extraaxisoptions',extraOpt);
 pause(secPausa);
 
 
 %% 
-sim_result_case_2_fl;
+sim_result_fl_second_tun_fig;
 % set(gcf,'visible','off');
-set(gcf,'Position',[0 0 600 800])
+set(gcf,'Position',plot_position)
 matlab2tikz('filename',...
-    'Figures/Sim_result_case_2_fl/sim_result_case_2_fl.tex',...
-    'showInfo',false,'strict',true,'standalone',true,...
-    'extraaxisoptions',extraOpt);
-pause(secPausa);
-
-
-
-%% 
-sim_result_comparison_fl;
-% set(gcf,'visible','off');
-set(gcf,'Position',[0 0 600 800])
-matlab2tikz('filename',...
-    'Figures/Sim_result_comparison_fl/sim_result_comparison_fl.tex',...
+    'Figures/Sim_result_fl_second_tun_fig/sim_result_fl_second_tun_fig.tex',...
     'showInfo',false,'strict',true,'standalone',true,...
     'extraaxisoptions',extraOpt);
 pause(secPausa);
 
 
 %% 
-sim_result_case_1_sc;
+real_result_fl_first_tun_fig;
 % set(gcf,'visible','off');
-set(gcf,'Position',[0 0 600 800])
+set(gcf,'Position',plot_position)
 matlab2tikz('filename',...
-    'Figures/Sim_result_case_1_sc/sim_result_case_1_sc.tex',...
+    'Figures/Real_result_fl_first_tun_fig/real_result_fl_first_tun_fig.tex',...
     'showInfo',false,'strict',true,'standalone',true,...
     'extraaxisoptions',extraOpt);
 pause(secPausa);
 
 
 %% 
-sim_result_case_2_sc;
+real_result_fl_second_tun_fig;
 % set(gcf,'visible','off');
-set(gcf,'Position',[0 0 600 800])
+set(gcf,'Position',plot_position)
 matlab2tikz('filename',...
-    'Figures/Sim_result_case_2_sc/sim_result_case_2_sc.tex',...
+    'Figures/Real_result_fl_second_tun_fig/real_result_fl_second_tun_fig.tex',...
+    'showInfo',false,'strict',true,'standalone',true,...
+    'extraaxisoptions',extraOpt);
+pause(secPausa);
+
+
+%%
+real_result_sc_fig
+% set(gcf,'visible','off');
+set(gcf,'Position',plot_position)
+matlab2tikz('filename',...
+    'Figures/Real_result_sc_fig/real_result_sc_fig.tex',...
     'showInfo',false,'strict',true,'standalone',true,...
     'extraaxisoptions',extraOpt);
 pause(secPausa);
 
 
 
-%% 
-sim_result_comparison_sc;
+%%
+sim_result_sc_fig
 % set(gcf,'visible','off');
-set(gcf,'Position',[0 0 600 800])
+set(gcf,'Position',plot_position)
 matlab2tikz('filename',...
-    'Figures/Sim_result_comparison_sc/sim_result_comparison_sc.tex',...
+    'Figures/Sim_result_sc_fig/sim_result_sc_fig.tex',...
     'showInfo',false,'strict',true,'standalone',true,...
     'extraaxisoptions',extraOpt);
 pause(secPausa);
-
 
 
 %% 

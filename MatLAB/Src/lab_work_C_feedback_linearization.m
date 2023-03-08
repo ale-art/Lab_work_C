@@ -37,18 +37,18 @@ load("Results\sim_result_case_1_fl_x");
 load("Results\sim_result_case_1_fl_u");
 
 
-figure();
-subplot(2,1,1);
-    plot(sim_result_case_1_fl_x);
-    hold on;
-    auto_plot('FL - $x$ with state measure',...
-            '$x_1$ mes|$x_2$ mes','time (s)|height $x$ (cm)');
-subplot(2,1,2);
-    plot(sim_result_case_1_fl_u);
-    hold on;
-    auto_plot('FL - model $u$ with state measure',...
-            '$u$ mes','time (s)|voltage $u$ (V)');
-saveas(gcf,'Plots/sim_result_case_1_fl.m');
+% figure();
+% subplot(2,1,1);
+%     plot(sim_result_case_1_fl_x);
+%     hold on;
+%     auto_plot('FL - model with state measure',...
+%             '$x_1$ mes|$x_2$ mes','time (s)|height $x$ (cm)');
+% subplot(2,1,2);
+%     plot(sim_result_case_1_fl_u);
+%     hold on;
+%     auto_plot('',...
+%             '$u$ mes','time (s)|voltage $u$ (V)');
+% saveas(gcf,'Plots/sim_result_case_1_fl.m');
 
 
 
